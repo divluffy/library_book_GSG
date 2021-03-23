@@ -1,0 +1,223 @@
+/* btns pop */
+
+.addbook{
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+width: 500px;
+height: 430px;
+background: #4e5e7e;
+z-index: 12;
+opacity: 0;
+display: none; 
+border-radius: 30px;
+box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.5);
+}
+
+.addbook.active{
+opacity:1;
+display: inline;
+}
+
+.overlay{
+width: 100%;
+height: 100vh;
+background:var(--imbody);
+background-size: cover;
+z-index: 11;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+display: none; 
+} 
+
+.overlay.active{
+display: inline;
+}
+
+/* start form pop inputs books */
+
+.addbook .close-pop-book{
+position: absolute;
+z-index: 10;
+width:35px;
+height: 35px;
+margin: 15px 0;
+right: 15px;
+cursor: pointer;
+border-radius: 50%;
+}
+
+.addbook form{
+position: fixed;
+padding: 5px;
+width: 100%;
+height:100%;
+padding-top: 50px;
+}
+
+.addbook form div{
+width: 100%;
+height: 50px;
+display: flex;
+margin: 15px 0;
+border-bottom:1px solid #171c26 ;
+background: #364159;
+display:flex ;
+justify-content: space-between;
+}
+
+.addbook form div label{
+color: #b3bdd0;
+line-height: 50px;
+width: 20%;
+padding-left: 8px;
+font-weight: 500;
+user-select: none;
+}
+
+.addbook form div input{
+color: #d9dfe9;
+background: #4e5e7e;
+width: 80%;
+outline: none;
+padding-left: 8px;
+font-size: 20px;
+border: 0;
+}
+
+.addbook form div input::placeholder{
+color: #d9dfe9;
+}
+
+.addbook form button{
+margin-top: 15px;
+width: 100%;
+height: 50px;
+border-radius: 10px;
+outline: none;
+border: 0;
+cursor: pointer;
+color: rgb(36, 31, 31);
+font-size: 30px;
+font-weight: 700;
+text-transform: capitalize;
+background: var(--btnCol2);
+transition: all 0.2s;
+}
+
+.addbook form button:hover{
+transform: scale(0.97);
+}
+
+/* search pop */
+
+.search-pop{
+position: fixed;
+width: 100%;
+background:var(--imbody);
+background-size: cover;
+right: 0;
+top: 0;
+height: 100vh;
+display: none;
+opacity: 0;
+z-index: 11;
+}
+
+.search-pop.active{
+display: inline;
+opacity: 1;
+}
+
+.search-pop .content{
+position: absolute;
+top: 40%;
+left: 50%;
+transform: translate(-50%,-50%);
+background: rgb(255, 255, 255);
+width: 650px;
+display: flex;
+border-radius: 5px;
+box-shadow: 0 1px 12px 0 rgba(255, 255, 255, 0.6);
+}
+
+    
+.search-pop  .content svg{
+width: 40px;
+cursor: pointer;
+}
+
+.search-pop .content svg path{
+fill: #000;
+}
+
+.search-pop .content input{
+width: 100%;
+padding-left: 5px;
+font-size: 25px;
+font-weight: 500;
+border: none;
+height: 50px;
+outline: none;
+}
+
+.search-pop .close-pop{
+position: absolute;
+width: 80px;
+top: 20%;
+right: 10%;
+transform: translatey(-50%);
+cursor: pointer;
+}
+
+.close-pop path{
+fill: aqua;
+}
+
+/* if inputs empty - msg */
+
+.msg-input{
+    display: none;
+    }
+
+.msg-input.active{
+width: 450px;
+height: 70px;
+font-size: 25px;
+background: #fff;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+border-radius: 10px;
+padding:18px;
+text-align: center;
+z-index: 13;
+box-shadow: 0 2px 18px 0 rgba(255, 255, 255, 0.9);
+transition: all 0.4s;
+display: inline;
+}
+
+/* window<600 */
+
+.search-pop.on .content{
+
+    width: 450px;
+
+}
+
+.addbook.on{
+
+    width: 450px;
+
+}
+
+
+
+
+
+

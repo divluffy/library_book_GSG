@@ -1,0 +1,273 @@
+*{
+padding: 0;
+margin: 0;
+font-family: sans-serif;
+box-sizing: border-box;
+}
+
+:root{
+--btnCol: linear-gradient(to right,rgb(96, 255, 221),rgb(245, 171, 171),rgb(195, 226, 82));
+--btnCol2:linear-gradient(to right,#ea9010,rgb(245, 171, 171),#90be6d,#37371f);
+--imbody:url('./src/502079.jpg') no-repeat center fixed;;
+}
+
+body{
+width: 100%;
+height: 100vh;
+background:var(--imbody);
+background-size: cover;
+}
+
+/* menu */
+
+header{
+position: fixed;
+width: 200px;
+height: 100vh;
+padding: 20px;
+}
+
+
+
+.logo{
+font-size: 32px;
+font-weight: 700;
+padding: 10px;
+text-align: center;
+color: #fff;
+user-select: none;
+}
+
+.logo span{
+color: #f00;
+}
+
+.search-btn{
+margin-top: 20px;
+margin-left: -15px;
+background: #fff;
+width:170px;
+height: 30px;
+display: flex;
+align-items: center;
+border-bottom: 1px solid #000;
+cursor: pointer;
+}
+
+.search-btn svg{
+width: 20px;
+position: absolute;
+}
+
+.search-btn svg path{
+fill: #000;
+}
+
+.search-btn input{
+margin-left: 47px;
+cursor: pointer;
+width: 150px;
+height: 100%;
+outline: none;
+border: 0;
+}
+
+.menu{
+margin-top: 20px;
+}
+
+.menu ul{
+list-style: none;
+display: block;
+padding: 5px;
+}
+
+.menu ul li{
+margin: 10px;
+padding: 5px;
+text-align: center;
+}
+
+.menu ul li a{
+text-decoration: none;
+color: #fff;
+letter-spacing: 0.5px;
+padding: 10px 20px;
+border-radius: 20px;
+}
+
+.menu ul li a:hover{
+background: var(--btnCol2,rgb(96, 255, 221));
+color: #000;
+}
+
+.btn-upload{
+margin-top: 20px;
+height: 50px;
+width: 160px;
+border-radius: 20px;
+}
+
+.btn-upload button{
+
+width: 100%;
+height: 100%;
+border-radius: 20px;
+outline: none;
+margin-top: 20px;
+border: none;
+background: var(--btnCol,rgb(96, 255, 221));
+cursor: pointer;
+color: rgb(56, 38, 38);
+font-size: 17px;
+font-weight: 400;
+transition: all .3s ease;
+animation: anime 3.3s infinite;
+}
+
+.btn-upload button:hover{
+box-shadow: 0 1px 10px rgba(255, 255, 255, 0.9);
+color: #000;
+font-weight:500;
+}
+
+@keyframes anime{
+0%{transform: translatey(5px);}
+50%{transform: translatey(-5px);}
+100%{transform: translatey(5px);}
+}
+
+/* mainnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn */
+
+main{
+position: absolute;
+width: calc(100% - 200px);
+right: 1px;
+top: 0;
+padding: 15px;
+padding-bottom: 20px;
+display: grid;
+grid-template-columns: repeat(5,1fr);
+grid-gap: 20px 15px;
+}
+
+main div{
+position: relative;
+width: 180px;
+height: 250px;
+cursor: pointer;
+transition: all 0.4s;
+overflow: hidden;
+box-shadow: 0 1px 4px 0 rgba(255, 255, 255, 0.2);
+}
+
+.card div{
+background: #fff;
+position: absolute;
+padding: 3px ;
+overflow: hidden;
+border-radius: 0;
+top: 255px;
+cursor: default;
+box-shadow: 0 -5px 0 0 rgba(0 , 0, 0, 0.3);
+transition: all 0.6s ; 
+} 
+
+main div:hover{
+box-shadow: 0 1px 7px 0  rgba(0 , 0, 0, 0.7);
+}
+
+main .card  img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: all 0.4s;
+}
+
+main .card:hover {
+transform: scale(1.1);
+}
+
+.card:hover div{
+top: 150px;
+display: inline;
+opacity:1;
+} 
+
+.card h1{
+font-size: 17px;
+color: #000;
+font-weight: 500;
+border-bottom: 1px solid #000;
+padding-left: 5px;
+margin-top: 3px;
+text-transform: capitalize;
+}
+
+.card h2{
+padding: 5px;
+text-transform: capitalize;
+font-size: 14px;
+color: #000;
+font-weight: 600;
+}
+
+.card span{
+font-size: 10px;
+color: #000;
+font-weight: 600;
+padding: 5px;
+}
+
+/* showme after for all tags*/
+.showme{
+position: fixed;
+width: 35px;
+height: 35px;
+cursor: pointer;
+margin: 10px ;
+z-index: 10;
+display: none;
+
+}
+
+header.active{
+
+position: fixed;
+z-index: 11;
+background: url('./src/502079.jpg') no-repeat;
+display: inline;
+width:100%;
+height: 100vh;
+padding: 20px;
+
+}
+
+header.active .search-btn{
+margin: 15px auto;   
+}
+
+header.active .btn-upload{
+margin: 15px auto;  
+}
+
+.backmenu{
+display: none;
+}
+header.active .backmenu{
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    margin: 10px ;
+    background: #fff;
+      z-index: 12;
+display: inline;
+
+}
+
+
+sub{
+font-size: 13px;
+font-weight: 400;
+}
