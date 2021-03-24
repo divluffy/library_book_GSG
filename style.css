@@ -5,6 +5,7 @@ font-family: sans-serif;
 box-sizing: border-box;
 }
 
+/* varabile */
 :root{
 --btnCol: linear-gradient(to right,rgb(96, 255, 221),rgb(245, 171, 171),rgb(195, 226, 82));
 --btnCol2:linear-gradient(to right,#ea9010,rgb(245, 171, 171),#90be6d,#37371f);
@@ -26,8 +27,6 @@ width: 200px;
 height: 100vh;
 padding: 20px;
 }
-
-
 
 .logo{
 font-size: 32px;
@@ -137,7 +136,7 @@ font-weight:500;
 100%{transform: translatey(5px);}
 }
 
-/* mainnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn */
+/* main start */
 
 main{
 position: absolute;
@@ -228,19 +227,16 @@ cursor: pointer;
 margin: 10px ;
 z-index: 10;
 display: none;
-
 }
 
 header.active{
-
 position: fixed;
 z-index: 11;
 background: url('./src/502079.jpg') no-repeat;
+background-size: 450%;
 display: inline;
 width:100%;
-height: 100vh;
 padding: 20px;
-
 }
 
 header.active .search-btn{
@@ -254,18 +250,17 @@ margin: 15px auto;
 .backmenu{
 display: none;
 }
+
 header.active .backmenu{
-    position: fixed;
-    width: 35px;
-    height: 35px;
-    cursor: pointer;
-    margin: 10px ;
-    background: #fff;
-      z-index: 12;
+position: fixed;
+width: 35px;
+height: 35px;
+cursor: pointer;
+margin: 10px ;
+background: #fff;
+z-index: 12;
 display: inline;
-
 }
-
 
 sub{
 font-size: 13px;
