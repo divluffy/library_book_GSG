@@ -7,7 +7,7 @@ left: 50%;
 transform: translate(-50%,-50%);
 width: 500px;
 height: 430px;
-background: #4e5e7e;
+background: #adadadea;
 z-index: 12;
 opacity: 0;
 display: none; 
@@ -23,7 +23,7 @@ display: inline;
 .overlay{
 width: 100%;
 height: 100vh;
-background:var(--imbody);
+background:rgba(0, 0, 0, 0.6);
 background-size: cover;
 z-index: 11;
 position: fixed;
@@ -57,6 +57,7 @@ padding: 5px;
 width: 100%;
 height:100%;
 padding-top: 50px;
+
 }
 
 .addbook form div{
@@ -64,10 +65,11 @@ width: 100%;
 height: 50px;
 display: flex;
 margin: 15px 0;
-border-bottom:1px solid #171c26 ;
-background: #364159;
+background: #2a272bbb;
 display:flex ;
 justify-content: space-between;
+border-radius: 20px;
+
 }
 
 .addbook form div label{
@@ -86,6 +88,7 @@ width: 80%;
 outline: none;
 padding-left: 8px;
 font-size: 20px;
+border-radius:0  18px 18px 0;
 border: 0;
 }
 
@@ -114,7 +117,6 @@ transform: scale(0.97);
 }
 
 /* search pop */
-
 .search-pop{
 position: fixed;
 width: 100%;
@@ -145,7 +147,7 @@ border-radius: 5px;
 box-shadow: 0 1px 12px 0 rgba(255, 255, 255, 0.6);
 }
 
-    
+
 .search-pop  .content svg{
 width: 40px;
 cursor: pointer;
@@ -179,10 +181,9 @@ fill: aqua;
 }
 
 /* if inputs empty - msg */
-
 .msg-input{
-    display: none;
-    }
+display: none;
+}
 
 .msg-input.active{
 width: 450px;
@@ -190,34 +191,23 @@ height: 70px;
 font-size: 25px;
 background: #fff;
 position: fixed;
-top: 50%;
+top: 10%;
 left: 50%;
 transform: translate(-50%,-50%);
-border-radius: 10px;
+border-radius: 30px;
 padding:18px;
 text-align: center;
 z-index: 13;
-box-shadow: 0 2px 18px 0 rgba(255, 255, 255, 0.9);
+box-shadow: 0 2px 18px 0 rgba(110, 85, 85, 0.9);
 transition: all 0.4s;
 display: inline;
 }
 
 /* window<600 */
-
 .search-pop.on .content{
-
-    width: 450px;
-
+width: 450px;
 }
 
 .addbook.on{
-
-    width: 450px;
-
+width: 450px;
 }
-
-
-
-
-
-
