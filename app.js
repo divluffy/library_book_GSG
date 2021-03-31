@@ -23,38 +23,92 @@ let myMain    = document.querySelector("main"),
     {title:"Harry Potter and the Sorcerer's Stone",author:"J.K. Rowling",linke:"./src/b1.jpg", category:"Novels"},
     {title:"The Woman in the Window",author:"A.J. Finn",linke:"./src/b2.jpg", category:"Novels"},
     {title:"The Great Alone",author:"Kristin Hannah",linke:"./src/b3.jpg", category:"Novels"},
-    {title:"Little Fires Everywhere",author:"Celeste Ng",linke:"./src/b4.jpg", category:"Novels"},
-    {title:"The President Is Missing",author:"James Patterson",linke:"./src/b5.jpg", category:"Novels"},
-    {title:"The Outsider",author:"Stephen King",linke:"./src/b6.jpg", category:"Novels"},
-    {title:"The Handmaid's Tale",author:"Margaret Atwood",linke:"./src/b7.jpg", category:"Novels"},
-    {title:"Ready Player One",author:"Ernest Cline",linke:"./src/b8.jpg", category:"Novels"},
-    {title:"Before We Were Yours",author:"",linke:"./src/b9.jpg", category:"Novels"},
-    {title:"Crazy Rich Asians",author:"Kevin Kwan",linke:"./src/b10.jpg", category:"Novels"},
-    {title:"Harry Potter and the Sorcerer's Stone",author:"J.K. Rowling",linke:"./src/b1.jpg", category:"Novels"},
-    {title:"The Woman in the Window",author:"A.J. Finn",linke:"./src/b2.jpg", category:"Novels"},
-    {title:"The Great Alone",author:"Kristin Hannah",linke:"./src/b3.jpg", category:"Novels"},
-    {title:"Little Fires Everywhere",author:"Celeste Ng",linke:"./src/b4.jpg", category:"Novels"},
-    {title:"The President Is Missing",author:"James Patterson",linke:"./src/b5.jpg", category:"Novels"},
-    {title:"The Outsider",author:"Stephen King",linke:"./src/b6.jpg", category:"Novels"},
-    {title:"The Handmaid's Tale",author:"Margaret Atwood",linke:"./src/b7.jpg", category:"Novels"},
-    {title:"Ready Player One",author:"Ernest Cline",linke:"./src/b8.jpg", category:"Novels"},
-    {title:"Before We Were Yours",author:"",linke:"./src/b9.jpg", category:"Novels"},
-    {title:"Crazy Rich Asians",author:"Kevin Kwan",linke:"./src/b10.jpg", category:"Novels"},
-    {title:"Harry Potter and the Sorcerer's Stone",author:"J.K. Rowling",linke:"./src/b1.jpg", category:"Novels"},
-    {title:"The Woman in the Window",author:"A.J. Finn",linke:"./src/b2.jpg", category:"Novels"},
-    {title:"The Great Alone",author:"Kristin Hannah",linke:"./src/b3.jpg", category:"Novels"},
-    {title:"Little Fires Everywhere",author:"Celeste Ng",linke:"./src/b4.jpg", category:"Novels"},
-    {title:"The President Is Missing",author:"James Patterson",linke:"./src/b5.jpg", category:"Novels"},
-    {title:"The Outsider",author:"Stephen King",linke:"./src/b6.jpg", category:"Novels"}
+    {title:"Little Fires Everywhere",author:"Celeste Ng",linke:"./src/b4.jpg", category:"Novels"}
 ]
+
+
+let newbook =[];
+
+
+if(localStorage.test){
+
+    console.log(localStorage.test)
+    let moon = localStorage.test
+    let nig = JSON.parse(localStorage.getItem('test'));
+    console.log(moon)
+
+    console.log(nig)
+
+    newbook = nig
+for (let a = 0; a < nig.length; a++) {
+        addBookStorge(a)  
+}
+
+
+
+}
+
+
+
+
+function  addBookStorge(a){
+    let creat = document.createElement('div'),
+        creat2Div  = document.createElement('div'),
+         creatH1    = document.createElement('h1'),
+         creatH2    = document.createElement('h2'),
+         creatImg    = document.createElement('img'),
+         creatSpan    = document.createElement('span')
+
+    //add tags for cards
+    myMain.appendChild(creat)
+    creat.classList.add("card")
+    creat.appendChild(creat2Div)
+    creat2Div.appendChild(creatH1)
+    creat2Div.appendChild(creatH2)
+    creat.appendChild(creatImg)
+    creat2Div.appendChild(creatSpan)
+
+    //content from books array
+    creatH1.textContent = newbook[a].title
+    creatH2.textContent = newbook[a].author
+    creatImg.src = newbook[a].linke
+    creatSpan.textContent = newbook[a].category
+}
+
+
+
 
 addmyBook.addEventListener('click', ()=>{
     let v1 = bookTitle.value,
         v2 = Theauthor.value,
         v3 = Imagelink.value,
-        v4 = category.value
+        v4 = category.value;
 
     if(v1&&v2&&v3&&v4){
+
+
+    
+        let book = {
+            title:v1,
+            author:v2,
+            linke:v3,
+            category:v4};
+    
+            newbook.unshift(book)
+    
+
+            
+        let booktake = JSON.stringify(newbook);
+        localStorage.setItem("test", booktake);
+        let mytest = JSON.parse(localStorage.getItem('test'));
+
+        console.log(book)
+        console.log(newbook)
+        console.log(localStorage.test)
+        console.log(localStorage)
+
+        
+
         let creatNew = document.createElement('div'),
             creat2New  = document.createElement('div'),
             creatH1N    = document.createElement('h1'),
@@ -85,9 +139,25 @@ addmyBook.addEventListener('click', ()=>{
     }
 })
 
+
+
+
+
+
+
+
 for (let i = 0; i < books.length; i++) {
     addBokk(i)
 }
+
+
+
+
+
+
+
+
+
 
 function  addBokk(n){
     let creat = document.createElement('div'),
@@ -113,8 +183,25 @@ function  addBokk(n){
     creatSpan.textContent = books[n].category
 }
 
-// close pops
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// close pops
 function deleteActive(){
     addbook.classList.remove("active")
     overlay.classList.remove("active")
@@ -136,25 +223,20 @@ closepb.onclick = ()=>{
 }
 //if he want search in book - pop
 searchBtn.onclick = ()=>{
-    searchPop.classList.add("active")
+    searchPop.classList.add("active");
 }
 
 closePop.onclick = ()=>{
-    searchPop.classList.remove("active")
+    searchPop.classList.remove("active");
 }
-
 //menu show
 
-
-
 showme.onclick = ()=>{
-    myHeader.classList.toggle("active")
-    searchPop.classList.add("on")
-    addbook.classList.add("on")
+    myHeader.classList.toggle("active");
+    searchPop.classList.add("on");
+    addbook.classList.add("on");
 }
 
-
 backmenu.onclick = ()=>{
-    myHeader.classList.toggle("active")
-
+    myHeader.classList.toggle("active");
 }
