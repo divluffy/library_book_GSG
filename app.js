@@ -19,13 +19,34 @@ let myMain    = document.querySelector("main"),
     Imagelink = document.querySelector("#Imagelink"),
     category  = document.querySelector("#Category");
     
- let books = [
-    {title:"Harry Potter and the Sorcerer's Stone",author:"J.K. Rowling",linke:"./src/b1.jpg", category:"Novels"},
-    {title:"The Woman in the Window",author:"A.J. Finn",linke:"./src/b2.jpg", category:"Novels"},
-    {title:"The Great Alone",author:"Kristin Hannah",linke:"./src/b3.jpg", category:"Novels"},
-    {title:"Little Fires Everywhere",author:"Celeste Ng",linke:"./src/b4.jpg", category:"Novels"}
-]
-
+  let books = [
+                {title:"Harry Potter and the Sorcerer's Stone",author:"J.K. Rowling",linke:"./src/b1.jpg", category:"Novels"},
+                {title:"The Woman in the Window",author:"A.J. Finn",linke:"./src/b2.jpg", category:"Novels"},
+                {title:"The Great Alone",author:"Kristin Hannah",linke:"./src/b3.jpg", category:"Novels"},
+                {title:"Little Fires Everywhere",author:"Celeste Ng",linke:"./src/b4.jpg", category:"Novels"},
+                {title:"The President Is Missing",author:"James Patterson",linke:"./src/b5.jpg", category:"Novels"},
+                {title:"The Outsider",author:"Stephen King",linke:"./src/b6.jpg", category:"Novels"},
+                {title:"The Handmaid's Tale",author:"Margaret Atwood",linke:"./src/b7.jpg", category:"Novels"},
+                {title:"Ready Player One",author:"Ernest Cline",linke:"./src/b8.jpg", category:"Novels"},
+                {title:"Before We Were Yours",author:"",linke:"./src/b9.jpg", category:"Novels"},
+                {title:"Crazy Rich Asians",author:"Kevin Kwan",linke:"./src/b10.jpg", category:"Novels"},
+                {title:"Harry Potter and the Sorcerer's Stone",author:"J.K. Rowling",linke:"./src/b1.jpg", category:"Novels"},
+                {title:"The Woman in the Window",author:"A.J. Finn",linke:"./src/b2.jpg", category:"Novels"},
+                {title:"The Great Alone",author:"Kristin Hannah",linke:"./src/b3.jpg", category:"Novels"},
+                {title:"Little Fires Everywhere",author:"Celeste Ng",linke:"./src/b4.jpg", category:"Novels"},
+                {title:"The President Is Missing",author:"James Patterson",linke:"./src/b5.jpg", category:"Novels"},
+                {title:"The Outsider",author:"Stephen King",linke:"./src/b6.jpg", category:"Novels"},
+                {title:"The Handmaid's Tale",author:"Margaret Atwood",linke:"./src/b7.jpg", category:"Novels"},
+                {title:"Ready Player One",author:"Ernest Cline",linke:"./src/b8.jpg", category:"Novels"},
+                {title:"Before We Were Yours",author:"",linke:"./src/b9.jpg", category:"Novels"},
+                {title:"Crazy Rich Asians",author:"Kevin Kwan",linke:"./src/b10.jpg", category:"Novels"},
+                {title:"Harry Potter and the Sorcerer's Stone",author:"J.K. Rowling",linke:"./src/b1.jpg", category:"Novels"},
+                {title:"The Woman in the Window",author:"A.J. Finn",linke:"./src/b2.jpg", category:"Novels"},
+                {title:"The Great Alone",author:"Kristin Hannah",linke:"./src/b3.jpg", category:"Novels"},
+                {title:"Little Fires Everywhere",author:"Celeste Ng",linke:"./src/b4.jpg", category:"Novels"},
+                {title:"The President Is Missing",author:"James Patterson",linke:"./src/b5.jpg", category:"Novels"},
+                {title:"The Outsider",author:"Stephen King",linke:"./src/b6.jpg", category:"Novels"}
+            ]
 
 let newbook =[];
 
