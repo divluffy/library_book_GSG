@@ -49,10 +49,7 @@ let myMain    = document.querySelector("main"),
             ]
 
 let newbook =[];
-
-
 if(localStorage.test){
-
     console.log(localStorage.test)
     let moon = localStorage.test
     let nig = JSON.parse(localStorage.getItem('test'));
@@ -61,16 +58,10 @@ if(localStorage.test){
     console.log(nig)
 
     newbook = nig
-for (let a = 0; a < nig.length; a++) {
-        addBookStorge(a)  
+    for (let a = 0; a < nig.length; a++) {
+            addBookStorge(a)  
+    }
 }
-
-
-
-}
-
-
-
 
 function  addBookStorge(a){
     let creat = document.createElement('div'),
@@ -96,9 +87,6 @@ function  addBookStorge(a){
     creatSpan.textContent = newbook[a].category
 }
 
-
-
-
 addmyBook.addEventListener('click', ()=>{
     let v1 = bookTitle.value,
         v2 = Theauthor.value,
@@ -106,19 +94,13 @@ addmyBook.addEventListener('click', ()=>{
         v4 = category.value;
 
     if(v1&&v2&&v3&&v4){
-
-
-    
         let book = {
             title:v1,
             author:v2,
             linke:v3,
             category:v4};
-    
             newbook.unshift(book)
-    
-
-            
+       
         let booktake = JSON.stringify(newbook);
         localStorage.setItem("test", booktake);
         let mytest = JSON.parse(localStorage.getItem('test'));
@@ -127,8 +109,6 @@ addmyBook.addEventListener('click', ()=>{
         console.log(newbook)
         console.log(localStorage.test)
         console.log(localStorage)
-
-        
 
         let creatNew = document.createElement('div'),
             creat2New  = document.createElement('div'),
@@ -160,25 +140,9 @@ addmyBook.addEventListener('click', ()=>{
     }
 })
 
-
-
-
-
-
-
-
 for (let i = 0; i < books.length; i++) {
     addBokk(i)
 }
-
-
-
-
-
-
-
-
-
 
 function  addBokk(n){
     let creat = document.createElement('div'),
@@ -204,24 +168,6 @@ function  addBokk(n){
     creatSpan.textContent = books[n].category
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // close pops
 function deleteActive(){
     addbook.classList.remove("active")
@@ -234,14 +180,17 @@ btn.onclick = ()=>{
     addbook.classList.add("active")
     overlay.classList.add("active")
 }
-//
+
+//close if click
 overlay.onclick = ()=>{
     deleteActive()
  }
-//
+
+//for close pop
 closepb.onclick = ()=>{
     deleteActive()
 }
+
 //if he want search in book - pop
 searchBtn.onclick = ()=>{
     searchPop.classList.add("active");
@@ -250,8 +199,8 @@ searchBtn.onclick = ()=>{
 closePop.onclick = ()=>{
     searchPop.classList.remove("active");
 }
-//menu show
 
+//menu show
 showme.onclick = ()=>{
     myHeader.classList.toggle("active");
     searchPop.classList.add("on");
